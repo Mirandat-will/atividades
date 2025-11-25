@@ -40,7 +40,7 @@ RNA_Codons = {
 
 
 protein = ""
-for i in range(0, len(rna), 3):
+for i in range(0,len(rna) - (len(rna) % 3), 3):
     codon = rna[i:i+3]
     protein += RNA_Codons [codon]
 print(f"\n\nThe protein sequence is: \n\n{protein}")
